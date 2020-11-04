@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="base.css" media="screen" />
+
+</head>
+
+<body>
+
+
+    <!-- Container grille acueillant les élément de fonction + navigation -->
+    <div id="wrapper">
+        <div id="menu">
+            <ul id="nav">
+                <li onclick="openhome()">Home</li>
+                <li onclick="openprojet(1)">Projects</li>
+                <li onclick="openitem('contact')">Contact</li>
+            </ul>
+            <div id="logo" onclick="openitem('propos')">Laurie Paolin</div>
+              <!-- <div id="contact"><img src="img/cv.jpg" /></div>-->
+            <!-- Ici la fiche-barre contact -->
+            <ul id="contact" class="pasvoir">
+                <li><a href="mailto:lauriepaolin@gmail.com">lauriepaolin@gmail.com</a></li>
+                <li>07 77 78 21 48</li>
+                <li onclick="openitem('moncv')">Mon CV</li>
+                <li onclick="closeitem('contact')" class="bouton">&times;</li>
+            </ul>
+            <!-- Ici la fiche-cv -->
+            <div id="moncv" class="pasvoir"><div onclick="closeitem('moncv')" class="bouton">&times;</div><img src="cv.jpg"></div>
+
+            <!-- Ici la fiche-à propos -->
+
+            <div id="propos" class="pasvoir"><div onclick="closeitem('propos')" class="bouton">&times;</div>
+                <p>HELLO ! <br>
+                Je me présente, Paolin Laurie, 22 ans, toulousaine. Titulaire d'un bac scientifique option svt, italien et art plastique, mention assez bien. Mon souhait étant de me diriger vers des études créatives, j'ai décidé de rejoindre Prep'art Toulouse en 2016 pour un an de prépa afin de préparer les concours d'entrée aux écoles supérieures d'art. Actuellement, je suis à l'École Supérieure d'Art et de Design de Reims (ESAD) en 4e année, section Graphisme & Numérique. Je vous laisse prendre connaissance de mes projets réalisés lors de ces dernières années. 
+            <br>Bon visionnage à tous !</p>
+             </div>
+        </div>
+
+ 
+        <!-- Container acueillant le contenu principal de la page -->
+        <!-- qui démarre sur le contenu de la page accueil.html -->
+        <div id="content"><iframe src="accueil.html"></iframe></div>
+
+    </div>
+
+    <script>
+        function openprojet(x) {
+         document.getElementById("content").innerHTML = '<iframe src="projet' + x + '.html"></iframe>';
+        }
+        function openhome() {
+            document.getElementById("content").innerHTML = '<iframe src="accueil.html"></iframe>';
+        }
+        function openitem(x) {
+            document.getElementById(x).classList.toggle('voir');
+        }
+        function closeitem(x) {
+            document.getElementById(x).classList.remove('voir');
+        }
+    </script>
+
+
+</body>
+
+</html>

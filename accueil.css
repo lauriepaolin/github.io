@@ -1,0 +1,197 @@
+
+        /* Ici, on calibre le body pour avoir les dimensions d ela fenêtre et ensuite dimensionner son contenu en cascade. On cache les éventuels ascenceurs pour laisser les image dépasser un peu sans qu'ils apparaissent. */
+        body {
+            padding: 0;
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            font-family: 'Playfair Display';
+            overflow:hidden;
+            
+        }
+
+        /* Ici, un container pour toutes les images */
+        #wrapperimage {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            z-index: 0;
+        }
+        /* Ici on rend les images proportionnelles à leur contenant qui, lui aussi, est proportionnel à la fenêtre*/
+        img {
+            width:18vmax;
+            height:auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+
+        /* Ici on style le mots contenu dans les div, avec son image */
+        #wrapperimage .mot {
+            color: #fff;
+            font-size: 1.2vmax;
+            opacity:0;
+            transition:all .3s ease-in;
+            background-color: #00000080;
+            width:30vmax;
+            height:30vmax;
+            user-select: none;
+        }
+
+        /* Là, on dit à toutes les div dans le grand container d'être en position absolue */
+        #wrapperimage div {
+            position: absolute;
+            overflow: visible;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            /* cursor: pointer; */
+            cursor: url(cursorv.png), pointer;
+        }
+        
+
+        /* Là, on cible chaque div avec image+mot pour lui donner position et rotation.
+        Attention ici, il faut replacer chaque pack (image+mot) selon les dimensions de l'image et le placement qu'on veut.
+        On peut aussi les placer différement si on veut : ici les deux premier sont placé par rapport au coin top-left, les deux suivant sur le coin top-right et ainsi de suite... */
+        #cible1 {
+            left: 10vw;
+            top: 25vh;
+            transform: rotate(-6deg);
+        }
+
+        #cible2 {
+            top: 8vh;
+            left: 20vw;
+        }
+
+        #cible3 {
+            transform: rotate(18deg);
+            top: 15vh;
+            right: 10vw;
+        }
+
+        #cible4 {
+
+            transform: rotate(8deg);
+            top: 13vh;
+            right: 45vw;
+        }
+
+        #cible5 {
+            transform: rotate(-10deg);
+            bottom: 40vh;
+            right: 45vw;
+        }
+
+        #cible6 {
+            transform: rotate(12deg);
+            bottom: 35vh;
+            right: 20vw;
+        }
+
+        #cible7 {
+            transform: rotate(-6deg);
+            bottom: 15vh;
+            left: 55vw;
+        }
+
+        #cible8 {
+            transform: rotate(4deg);
+            bottom: 25vh;
+            left: 20vw;
+        }
+        #cible9 {
+        
+            bottom:12vh;
+            left: 1vw;
+        }
+        #cible10 {
+            bottom: 12vh;
+            left: 80vw;
+        }
+        #cible11 {
+            transform: rotate(2deg);
+            bottom: 50vh;
+            left: 50vw;
+        }
+        #cible12 {
+            transform: rotate(8deg);
+            bottom: 40vh;
+            left: 2vw;
+        }
+        #cible13 {
+            transform: rotate(6deg);
+            bottom: 77vh;
+            left: 80vw;
+        }
+        #cible14 {
+            transform: rotate(-8deg);
+            bottom: 40vh;
+            left: 80vw;
+        }
+
+        #cible15 {
+            transform: rotate(0deg);
+            top: 2vh;
+            left: 52vw;
+        }
+        #cible16 {
+            transform: rotate(-7deg);
+            top: 2vh;
+            left: 1vw;
+        }
+        #cible17 {
+            transform: rotate(0deg);
+            top: 65vh;
+            left: 30vw;
+        }
+
+       
+
+        /* Ici, on dit à chaque div contenant image+mot de passer au premier plan lors du rollover */
+        #cible1:hover,
+        #cible2:hover,
+        #cible3:hover,
+        #cible4:hover,
+        #cible5:hover,
+        #cible6:hover,
+        #cible7:hover,
+        #cible8:hover,
+        #cible9:hover,
+        #cible10:hover,
+        #cible11:hover,
+        #cible12:hover,
+        #cible13:hover,
+        #cible14:hover,
+        #cible15:hover,
+        #cible16:hover,
+        #cible17:hover{
+ 
+            z-index: 999;
+        }
+
+        /* Ici, rends la div avec le mot visible lors du rollover sur son contenant (qui contient aussi l'image) */
+        #cible1:hover .mot,
+        #cible2:hover .mot,
+        #cible3:hover .mot,
+        #cible4:hover .mot,
+        #cible5:hover .mot,
+        #cible6:hover .mot,
+        #cible7:hover .mot,
+        #cible8:hover .mot,
+        #cible9:hover .mot,
+        #cible10:hover .mot,
+        #cible11:hover .mot,
+        #cible12:hover .mot,
+        #cible13:hover .mot,
+        #cible14:hover .mot,
+        #cible15:hover .mot,
+        #cible16:hover .mot,
+        #cible17:hover .mot{
+
+            
+            opacity:1;
+            transition:all .3s ease-in;
+        }
