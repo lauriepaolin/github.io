@@ -76,7 +76,7 @@
             background-color: #cf8dd1;
             list-style-type: none;
             position:fixed;
-            top:50vh;
+            top:56vh;
             left:0;
             width:100vw;
             height:6vh;
@@ -116,8 +116,8 @@
         #moncv {
             background-color: #cf8dd1;
             position:fixed;
-            top:15vh;
-            left:8vh;
+            top:12vh;
+            left:3vh;
             overflow: hidden; 
             
        
@@ -125,25 +125,25 @@
         #propos {
             background-color: #cf8dd1;
             position:fixed;
-            top:12vh;
-            right: 3vh;
+            top: 11vh;
+            right: 2vh;
             overflow: hidden; 
-            width: 30vw;
+            width: 33vw;
         }
         #propos P {
             margin: 3vh 1vw;
-            font-size:1.2rem;
+            font-size:1.1rem;
             text-align: left;
         
         }
         #moncv img {
-            
-            width:35vw;
+
+            width:33vw;
             height:85vh;
         }
         #moncv .bouton, #propos .bouton {
             position:absolute;
-            top:1vh;
+            top:2vh;
             right:1vw;
         }
 
@@ -164,8 +164,8 @@
             
         }
         @font-face {
-            font-family: 'mister';
-            src: url('webfonts/mister.otf') format('truetype');
+            font-family: 'lora';
+            src: url('webfonts/lora.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
             

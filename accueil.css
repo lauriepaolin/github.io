@@ -16,6 +16,9 @@
             height: 100vh;
             position: relative;
             z-index: 0;
+            overflow-y: scroll;
+            scrollbar-width: thin;
+            scrollbar-color: rgb(207, 141, 209);
         }
         /* Ici on rend les images proportionnelles à leur contenant qui, lui aussi, est proportionnel à la fenêtre*/
         img {
@@ -75,67 +78,65 @@
         #cible4 {
 
             transform: rotate(8deg);
-            top: 13vh;
-            right: 45vw;
+            top: 12vh;
+            right: 42vw;
         }
 
         #cible5 {
             transform: rotate(-10deg);
-            bottom: 40vh;
+            top: 37vh;
             right: 45vw;
         }
 
         #cible6 {
             transform: rotate(12deg);
-            bottom: 35vh;
-            right: 20vw;
+            top: 50vh;
+            right: 28vw;
         }
 
         #cible7 {
             transform: rotate(-6deg);
-            bottom: 15vh;
-            left: 55vw;
+            top: 73vh;
+            left: 57vw;
         }
 
         #cible8 {
-            transform: rotate(4deg);
-            bottom: 25vh;
-            left: 20vw;
+            transform: rotate(8deg);
+            top: 52vh;
+            left: 21vw;
         }
         #cible9 {
-        
-            bottom:12vh;
+            top:70vh;
             left: 1vw;
         }
         #cible10 {
-            bottom: 12vh;
-            left: 80vw;
+            top: 63vh;
+            left: 78vw;
         }
         #cible11 {
-            transform: rotate(2deg);
-            bottom: 50vh;
-            left: 50vw;
+            top: 30vh;
+            left: 60vw;
         }
         #cible12 {
             transform: rotate(8deg);
-            bottom: 40vh;
+            top: 40vh;
             left: 2vw;
         }
         #cible13 {
-            transform: rotate(6deg);
-            bottom: 77vh;
+            transform: rotate(8deg);
+            top: 6vh;
             left: 80vw;
         }
         #cible14 {
             transform: rotate(-8deg);
-            bottom: 40vh;
+            top: 40vh;
             left: 80vw;
         }
 
         #cible15 {
             transform: rotate(0deg);
             top: 2vh;
-            left: 52vw;
+            left: 57vw;
         }
         #cible16 {
             transform: rotate(-7deg);
@@ -145,8 +146,28 @@
         #cible17 {
             transform: rotate(0deg);
             top: 65vh;
-            left: 30vw;
+            left: 36vw;
         }
+        #cible18 {
+            transform: rotate(6deg);
+            top: 80vh;
+            left: 20vw;
+        }
+        #cible19 {
+            transform: rotate(4deg);
+            top: 80vh;
+            left: 70vw;
+        }
+        #cible20 {
+            top: 90vh;
+            left: 45vw;
+        }
+        #cible21 {
+            transform: rotate(-4deg);
+            top: 110vh;
+            left: 6vw;
+        }
+        
 
        
 
@@ -167,8 +188,11 @@
         #cible14:hover,
         #cible15:hover,
         #cible16:hover,
-        #cible17:hover{
- 
+        #cible17:hover,
+        #cible18:hover,
+        #cible19:hover,
+        #cible20:hover,
+        #cible21:hover{
             z-index: 999;
         }
 
@@ -189,7 +213,11 @@
         #cible14:hover .mot,
         #cible15:hover .mot,
         #cible16:hover .mot,
-        #cible17:hover .mot{
+        #cible17:hover .mot,
+        #cible18:hover .mot,
+        #cible19:hover .mot,
+        #cible20:hover .mot,
+        #cible21:hover .mot{
 
             
             opacity:1;
